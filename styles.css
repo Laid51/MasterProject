@@ -1,0 +1,37 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background : linear-gradient(to bottom right, #FFD700, #ff8400); /* Dégradé de jaune */
+}
+
+.content {
+    padding: 20px;
+    text-align: left; /* Alignement du texte à gauche */
+    position: absolute;
+    top: 8cm; /* Position en haut par rapport au bord supérieur */
+    left: 3cm; /* Position à 3 centimètres de la marge à gauche */
+    display: flex; /* Utilisation de flexbox pour aligner le logo à côté du texte */
+    align-items: center; /* Centre les éléments verticalement */
+}
+
+.green-button {
+    background-color: #4CAF50; /* Couleur verte du bouton, à adapter selon tes préférences */
+    color: #ffffff; /* Couleur du texte du bouton, à adapter selon tes préférences */
+    border: none;
+    padding: 10px;
+    margin-right: 90px; /* Décalage du bouton de 5 centimètres */
+    cursor: pointer;
+}
+
+.logo {
+    width: 158px; /* Largeur du logo, à ajuster selon tes besoins */
+    height: auto; /* Hauteur automatique pour maintenir les proportions */
+    margin-right: 10px; /* Marge à droite pour séparer le logo du texte */
+}
+
+.text {
+    font-size: 58px; /* Taille moyenne du texte */
+    color: #333333; /* Couleur du texte, à adapter selon tes préférences */
+}
