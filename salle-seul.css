@@ -5,14 +5,19 @@ body {
     background: linear-gradient(to bottom right, #FFD700, #ff8400); /* Dégradé de jaune à orange */
     color: #333333;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     min-height: 100vh; /* Pour centrer verticalement sur la page */
 }
 
+a {
+    text-decoration: none;
+    color: inherit; /* Garde la couleur du texte par défaut */
+}
+
 header {
-    background-color: #333333;
-    color: #ffffff;
+    color: #0e0c0c;
     padding: 20px;
     text-align: center;
     width: 100%;
@@ -24,47 +29,53 @@ header {
     margin-right: 10px; /* Marge à droite pour séparer le logo du texte */
 }
 
-.conteneur-carrés {
-    display: flex;
-    flex-direction: column;
-}
-
-.rangée {
-    display: flex;
-}
-
-.carré {
-    flex: 1;
-    height: 100px; /* Hauteur du carré, à ajuster selon tes besoins */
-    background-color: #7FFFD4; /* Vert d'eau */
-    border-radius: 10px; /* Coins arrondis */
-    margin: 10px; /* Marge entre les carrés */
-}
-
 .salle {
-    background-color: #a5e376;
+    background-color: #7FFFD4; /* Vert d'eau */
     padding: 20px;
     margin: 20px;
     border-radius: 10px;
     text-align: center;
-    width: 200px;
+    width: 30%; /* Ajuste la largeur en fonction du nombre de salles par ligne */
     height: 200px;
-}
-
-.texte-carré {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    text-decoration: none; /* Supprimer le soulignement du lien */
+    color: #333333;
+    transition: background-color 0.3s ease; /* Transition de couleur de fond */
 }
 
-.contenu-salle {
-    padding: 20px;
-    text-align: center;
+.salle:hover {
+    background-color: #5CB85C; /* Changement de couleur de fond au survol */
 }
 
-footer {
-    color: #ffffff;
-    padding: 10px;
-    text-align: center;
-    width: 100%;
+/* Ajout d'une règle pour les petits écrans afin de réduire la largeur des salles */
+@media (max-width: 600px) {
+    .salle {
+        width: 80%; /* Ajuste la largeur pour un affichage adaptatif */
+    }
+}
+
+.jauge {
+    width: 80%; /* Ajuste la largeur de la jauge à 80% de la largeur du conteneur */
+    max-width: 500px; /* Fixe une largeur maximale pour la jauge */
+    height: 40px; /* Ajuste la hauteur de la jauge */
+    background-color: #e0e0e0;
+    border-radius: 20px; /* Augmente la valeur du rayon pour des coins plus arrondis */
+    overflow: hidden;
+    margin-top: 20px; /* Ajoute une marge en haut pour l'éloigner des éléments précédents */
+}
+
+.remplissage {
+    height: 100%;
+    background-color: #3498db;
+    border-radius: 20px;
+    width: 50%;
+    transition: width 0.5s ease;
+}
+
+input[type="range"] {
+    width: 80%; /* Ajuste la largeur du curseur à 80% de la largeur de la jauge */
+    max-width: 500px; /* Fixe une largeur maximale pour le curseur */
+    margin-top: 10px;
 }

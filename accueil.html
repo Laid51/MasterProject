@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Page d'accueil - Luminasense</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="content">
-        <div class="text">LuminaSense</div>
+    <a href="login.html">
         <img src="luminasense.png" alt="Luminasense Logo" class="logo">
-        <a href="salles.html" class="green-button">Quelle est votre salle ?</a>
-        <!-- Le reste de ton contenu peut être ajouté ici -->
+    </a>    
+    <div class="content">
+        <div class="text">LuminaSense, Enlightening Spaces, Empowering Lives !</div>
+        <script>
+            setTimeout(function() {
+                window.location.href = "login.html"; // Redirige vers login.html après 5 secondes
+            }, 10000);
+        </script>        
     </div>
 </body>
 </html>

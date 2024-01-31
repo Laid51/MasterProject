@@ -23,9 +23,24 @@
 
     <div class="salle">
     </div>
-    <div>
-    <h3>Choisissez la zone à éclairer </h3>
+    
+    <div class="jauge">
+        <div class="remplissage" id="intensite"></div>
     </div>
+</div>
+
+<div>
+    <h3>Choisissez l'intensité lumineuse :</h3>
+    <input type="range" min="0" max="100" value="50" id="intensiteRange" oninput="updateJauge()">
+</div>
+
+<script>
+    function updateJauge() {
+        var intensiteValue = document.getElementById('intensiteRange').value;
+        document.getElementById('intensite').style.width = intensiteValue + '%';
+    }
+</script>
+
 </div>
 </body>
 </html>

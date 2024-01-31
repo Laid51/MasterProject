@@ -1,0 +1,62 @@
+.logo {
+    display: block; /* ou inline-block, selon vos préférences */
+    margin: 0 auto; /* Centrer le logo */
+    max-width: 100px; /* ou toute autre taille selon vos besoins */
+    height: auto; /* pour conserver le ratio de l'image */
+    margin-bottom: 20px; /* espace entre le logo et le titre */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: url('65-652169_wallpaper-northern-lights-aurora-sky-starry-sky-green.jpg') no-repeat center center fixed;
+    background-size: cover; /* Couvrir tout l'arrière-plan */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Pour centrer verticalement sur la page */
+}
+
+.login-container {
+    background-color: rgba(11, 1, 1, 0.5); /* Fond semi-transparent blanc */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+/* Le reste du CSS reste inchangé */
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #3498db;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#erreur-msg {
+    color: #e74c3c; /* Rouge pour les messages d'erreur */
+    margin-top: 10px;
+}
+

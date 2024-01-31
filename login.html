@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Connexion - Luminasense</title>
+</head>
+<body>
+    <div class="login-container">
+        <img src="luminasense.png" alt="Logo" class="logo"> 
+        <h2>Connexion</h2>
+        <form onsubmit="return validerLogin()">
+            <input type="text" id="email" placeholder="Adresse e-mail" required>
+            <input type="password" id="password" placeholder="Mot de passe" required>
+            <button type="submit">Se connecter</button>
+        </form>
+        <p id="erreur-msg"></p>
+    </div>
+    <script>
+        function validerLogin() {
+            var email = document.getElementById('email').value;
+            var errorMsg = document.getElementById('erreur-msg');
+        
+            if (!email.endsWith('@isen.yncrea.fr')) {
+                errorMsg.textContent = 'L\'adresse e-mail n\'est pas correcte.';
+                return false;
+            }
+    
+            var username = email.split('@')[0];
+            if (email === username + "@isen.yncrea.fr") {
+                window.location.href = 'pages.html'; // Redirection vers pages.html
+                return false;
+            } else {
+                errorMsg.textContent = 'L\'adresse e-mail n\'est pas correcte.';
+                return false;
+            }
+        }
+    </script>
+         
+    </div>
+</body>
+</html>
